@@ -33445,8 +33445,8 @@ window.Typed = __webpack_require__(66);
       var strings = $(this).data('typing').split(',');
       var options = {
         strings: strings,
-        typeSpeed: 50,
-        backSpeed: 30,
+        typeSpeed: 30,
+        backSpeed: 15,
         backDelay: 800,
         loop: true
       };
