@@ -17338,7 +17338,7 @@ button:focus {
   .nav-tabs-shadow .nav-link.active,
   .nav-tabs-shadow .nav-item.show .nav-link {
     opacity: 1;
-    color: #757575;
+    color: #000;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); }
   .nav-tabs-shadow .nav-link.disabled {
