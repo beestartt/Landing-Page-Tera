@@ -4752,6 +4752,11 @@ button.bg-dark:focus {
 .d-inline-flex {
   display: inline-flex !important; }
 
+@media (max-width: 460px) {
+  .btn-dark {
+    background-color: blue
+  }
+}
 @media (min-width: 576px) {
   .d-sm-none {
     display: none !important; }
@@ -4791,6 +4796,7 @@ button.bg-dark:focus {
     display: flex !important; }
   .d-md-inline-flex {
     display: inline-flex !important; } }
+
 
 @media (min-width: 992px) {
   .d-lg-none {
