@@ -4754,7 +4754,7 @@ button.bg-dark:focus {
 
 @media (max-width: 460px) {
   .btn-dark {
-    background-color: blue
+
   }
 }
 @media (min-width: 576px) {
