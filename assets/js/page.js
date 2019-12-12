@@ -191,7 +191,7 @@ __webpack_require__(9);
   }
 
   page.defaults = {
-    googleApiKey:       null,
+    googleApiKey:       "AIzaSyAZBsUM6t1dXCsfwIdPb6EPWUqc6qGce5M",
     googleAnalyticsKey: null,
     reCaptchaSiteKey:   null,
     reCaptchaLanguage:  null,
