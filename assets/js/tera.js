@@ -5,23 +5,24 @@ var mensagem = $("#message").val();
 $("#sendMessage").on("click", function () {
     if (!name || !email || !mensagem) return;
     $.ajax({
-        method: "POST",
-        url: "https://api.mailgun.net/v3/beestart.com.br/messages",
+        type: 'POST',
+        cache: false,
         headers: {
             Authorization: "Basic YXBpOmtleS0xMzgwNmMzOGVlOTZmZTZmN2JiY2NlZWEzMGJkM2FhNA==", //! Se a API KEY mudar essa chave deve ser refeita.
             "content-type":
                 "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
         },
-        formData: {
-            from: email,
-            subject: "Contato através do site",
-            html: `<p>${nome}</p>`,
-            to: "rodrigo@beestart.com.br",
+        url: "https://api.mailgun.net/v3/beestart.com.br/messages",
+        data: { "from": "rodrigo@beestart.com.br", "to": "rodrigo@beestart.com.br" },
+        success: function (data) {
+            //somefunctionhere();
+            console.log("Aeeeee")
         },
-        success: function () {
-            console.log('success');
-            // $('#formBlock').hide();
-            // $('#thankyouBlock').show();
+        error: function (data) {
+            console.log('Silent failure.');
         }
     });
+    return false;
+
+
 });
