@@ -11,6 +11,10 @@
     <!-- Styles -->
     <link href="assets/css/page.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- JS -->
+    <link href="js/tera.js" >
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <link rel="icon" href="assets/img/favicon.png">
@@ -561,22 +565,22 @@
 
             <div class="row">
               <div class="col-11 col-md-10 mx-auto">
-                <form class="bg-gray p-6" action="../assets/php/sendmail.php" method="POST" data-form="mailer">
+                <form class="bg-gray p-6" id="contactform" method="POST" method="POST" data-form="mailer">
                   <div class="alert alert-success d-on-success">Recebemos seu contato e iremos retornar em breve.</div>
 
                   <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="name" placeholder="Seu nome">
+                    <input class="form-control form-control-lg" type="text" name="name" id="name" placeholder="Seu nome">
                   </div>
 
                   <div class="form-group">
-                    <input class="form-control form-control-lg" type="email" name="email" placeholder="Email">
+                    <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email">
                   </div>
 
                   <div class="form-group">
-                    <textarea class="form-control form-control-lg" rows="4" placeholder="Sua mensagem" name="message"></textarea>
+                    <textarea class="form-control form-control-lg" rows="4" placeholder="Sua mensagem" name="message" id="message"></textarea>
                   </div>
 
-                  <button class="btn btn-lg btn-block btn-primary" type="submit">Enviar</button>
+                  <button class="btn btn-lg btn-block btn-primary" id="sendMessage">Enviar</button>
                 </form>
 
               </div>
@@ -622,6 +626,8 @@
 
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/tera.js"></script>
     <script src="assets/js/page.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/page.js"></script>
