@@ -5,6 +5,7 @@ var mensagem = $("#message").val();
 $("#sendMessage").on("click", function () {
     if (!name || !email || !mensagem) return;
     $.ajax({
+        url: "https://api.mailgun.net/v3/beestart.com.br/messages",
         type: 'POST',
         cache: false,
         headers: {
@@ -12,8 +13,9 @@ $("#sendMessage").on("click", function () {
             "content-type":
                 "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
         },
-        url: "https://api.mailgun.net/v3/beestart.com.br/messages",
-        data: { "from": "rodrigo@beestart.com.br", "to": "rodrigo@beestart.com.br" },
+        username: 'api',
+        password: 'key-13806c38ee96fe6f7bbcceea30bd3aa4',
+        data: { "from": "rodrigo@beestart.com.br", "to": "rodrigo@beestart.com.br", "text": "Contato" },
         success: function (data) {
             //somefunctionhere();
             console.log("Aeeeee")
