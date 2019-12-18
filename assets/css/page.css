@@ -20859,4 +20859,9 @@ a.text-lightest:hover, a.text-lightest:focus {
   .text-white .close {
     color: #757575; }
 
+
+  .success-view {
+    display: none;
+  }
+
 /*# sourceMappingURL=page.css.map */

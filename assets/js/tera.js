@@ -1,6 +1,9 @@
 $('#contactform').on('submit', function (e) {
     event.preventDefault();
 
+    $("#sendMessage").text("Enviando...");
+    $("#sendMessage").attr('disabled', true);
+
     var nome = $("#name").val();
     var email = $("#email").val();
     var mensagem = $("#message").val();
@@ -8,7 +11,7 @@ $('#contactform').on('submit', function (e) {
     if (!nome || !email || !mensagem) return;
 
     $.ajax({
-        url: 'https://us-central1-tera-db-auth-storage.cloudfunctions.net/sendEmailContact',
+        url: 'https://us-central1-tera-api-homologation-6f7a3.cloudfunctions.net/sendEmailContactLP',
         method: 'POST',
         dataType: "json",
         data: {
@@ -20,11 +23,14 @@ $('#contactform').on('submit', function (e) {
         },
         success: function () {
             console.log('success');
-            // $('#formBlock').hide();
-            // $('#thankyouBlock').show();
+            $("#successText").css("display", "block");
+            $("#sendMessage").text("Enviar");
+            $("#sendMessage").attr('disabled', false);
         },
         error: function (error) {
             console.log("Error: ", error)
+            $("#sendMessage").text("Enviar");
+            $("#sendMessage").attr('disabled', false);
         }
     });
 
